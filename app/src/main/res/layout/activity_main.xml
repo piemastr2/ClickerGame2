@@ -16,7 +16,7 @@
         tools:layout_editor_absoluteY="8dp">
 
         <Button
-            android:id="@+id/Wild"
+            android:id="@+id/Wild_main"
             android:layout_width="245dp"
             android:layout_height="wrap_content"
             android:text="Wild"
@@ -24,7 +24,7 @@
             app:layout_constraintRight_toRightOf="parent" />
 
         <Button
-            android:id="@+id/Boss"
+            android:id="@+id/Boss_main"
             android:layout_width="245dp"
             android:layout_height="wrap_content"
             android:text="Boss"
@@ -32,7 +32,7 @@
             app:layout_constraintRight_toRightOf="parent" />
 
         <Button
-            android:id="@+id/Shop"
+            android:id="@+id/Shop_main"
             android:layout_width="245dp"
             android:layout_height="wrap_content"
             android:text="Shop"
@@ -40,7 +40,7 @@
             app:layout_constraintRight_toRightOf="parent" />
 
         <Button
-            android:id="@+id/Plant"
+            android:id="@+id/Plant_main"
             android:layout_width="245dp"
             android:layout_height="wrap_content"
             android:text="Plant"
@@ -48,7 +48,7 @@
             app:layout_constraintRight_toRightOf="parent" />
 
         <Button
-            android:id="@+id/Inn"
+            android:id="@+id/Inn_main"
             android:layout_width="245dp"
             android:layout_height="wrap_content"
             android:text="Inn"
