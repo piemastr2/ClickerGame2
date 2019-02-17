@@ -12,7 +12,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class ChooseALevelWild extends AppCompatActivity {
+public class ChooseALevelBoss extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +45,9 @@ public class ChooseALevelWild extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView parent, View view, int position, long id) {
-                Intent intent = new Intent(ChooseALevelWild.this, Wild.class);
+                Intent intent = new Intent(ChooseALevelBoss.this, Wild.class);
                 startActivity(intent);
             }
         });
-
     }
 }
