@@ -19,6 +19,9 @@
         <activity android:name=".Shop"></activity>
         <activity android:name=".Inn"></activity>
         <activity android:name=".Wild"></activity>
+        <activity android:name=".Boss"></activity>
+        <activity android:name=".BuyPlantPop"></activity>
+        <activity android:name=".ChooseALevelWild"></activity>
     </application>
 
 </manifest>
