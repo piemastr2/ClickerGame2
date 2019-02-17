@@ -8,33 +8,45 @@
 
 
     <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="495dp"
+        android:layout_width="411dp"
+        android:layout_height="739dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/emptystring6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="100dp"/>
 
         <TextView
             android:id="@+id/Shop_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:gravity="center"
-            android:text="Shop"/>
+            android:text="Shop"
+            android:textSize="50dp" />
+
+        <TextView
+            android:id="@+id/emptystring5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="100dp"/>
 
         <Button
             android:id="@+id/shop_weapon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Weapon" />
+            android:text="Weapon (Final)" />
 
         <Button
             android:id="@+id/shop_tree"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Tree" />
+            android:text="Trees" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
