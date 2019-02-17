@@ -10,10 +10,6 @@ public class Enemy extends Entity {
         this.lootAmount = lootAmount;
     }
 
-    public Enemy() {
-
-    }
-
     public void setAttackValue(int attackValue) {
         this.attackValue = attackValue;
     }
