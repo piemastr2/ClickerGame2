@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/blackbox"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="60dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/hpbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:maxWidth="300dp"
+            android:maxHeight="66dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/temp" />
+
+        <TextView
+            android:id="@+id/hptext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="80dp"
+            android:paddingTop="13dp"
+            android:text="99999999/99999999"
+            android:textColor="#FFFFFF" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

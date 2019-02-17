@@ -19,12 +19,28 @@ public class MainActivity extends AppCompatActivity {
             actionBar.hide();
         }
 
-        Button btn = (Button)findViewById(R.id.Shop_main);
+        Button btn_shop = (Button)findViewById(R.id.Shop_main);
+        Button btn_inn = (Button)findViewById(R.id.Inn_main);
+        Button btn_wild = (Button)findViewById(R.id.Wild_main);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        btn_shop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,Shop.class));
+            }
+        });
+
+        btn_inn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Inn.class));
+            }
+        });
+
+        btn_wild.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Wild.class));
             }
         });
     }
