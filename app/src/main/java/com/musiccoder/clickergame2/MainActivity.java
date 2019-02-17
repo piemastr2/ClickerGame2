@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         Button btn_shop = (Button)findViewById(R.id.Shop_main);
         Button btn_inn = (Button)findViewById(R.id.Inn_main);
         Button btn_wild = (Button)findViewById(R.id.Wild_main);
+        Button btn_boss = (Button)findViewById(R.id.Boss_main);
 
         btn_shop.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +41,14 @@ public class MainActivity extends AppCompatActivity {
         btn_wild.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,Wild.class));
+                startActivity(new Intent(MainActivity.this,ChooseALevelWild.class));
+            }
+        });
+
+        btn_boss.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Boss.class));
             }
         });
     }
