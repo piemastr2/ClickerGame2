@@ -1,21 +1,31 @@
 package com.musiccoder.clickergame2;
 
 public class Entity {
-    private int health;
+    private int currentHealth;
+    private int maxHealth;
 
-    public Entity(int health) {
-        this.health = health;
+    public Entity(int maxHealth) {
+        this.maxHealth = maxHealth;
+        this.currentHealth = maxHealth;
     }
 
-    public int getHealth() {
-        return health;
+    public int getMaxHealth() {
+        return maxHealth;
     }
 
-    public void setHealth(int health) {
-        this.health = health;
+    public void setMaxHealth(int maxHealth) {
+        this.maxHealth = maxHealth;
+    }
+
+    public int getCurrentHealth() {
+        return currentHealth;
+    }
+
+    public void setCurrentHealth(int currentHealth) {
+        this.currentHealth = currentHealth;
     }
 
     public boolean isAlive() {
-        return this.health >= 0;
+        return this.currentHealth >= 0;
     }
 }

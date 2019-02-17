@@ -14,10 +14,10 @@ public class Encounter {
     }
 
     public void playerAttacksEnemy(Player p, Enemy e) {
-        e.setHealth(e.getHealth()-p.getSword().getAttackValue());
+        e.setCurrentHealth(e.getCurrentHealth()-p.getSword().getAttackValue());
     }
 
     public void enemyAttacksPlayer(Enemy e, Player p) {
-        p.setHealth(p.getHealth()-e.getAttackValue());
+        p.setCurrentHealth(p.getCurrentHealth()-e.getAttackValue());
     }
 }
