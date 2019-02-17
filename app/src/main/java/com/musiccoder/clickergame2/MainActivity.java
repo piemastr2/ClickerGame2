@@ -31,9 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
         setShopClickListener(btn_shop);
 
-        setInnClickListener(player, btn_inn);
+        setInnClickListener(btn_inn);
 
         setWildClickListener(btn_wild);
+
+        setBossClickListener(btn_boss);
     }
 
     private void setShopClickListener(Button btn_shop) {
@@ -45,12 +47,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void setInnClickListener(Player player, Button btn_inn) {
+    private void setInnClickListener(Button btn_inn) {
         btn_inn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, Inn.class);
-                i.putExtra("numOfCoins", Integer.toString(player.getCoins()));
+                i.putExtra("numOfCoins", Integer.toString(Player.getInstance(0,0,null).getCoins()));
                 startActivity(i);
             }
         });
@@ -60,10 +62,12 @@ public class MainActivity extends AppCompatActivity {
         btn_wild.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,ChooseALevelWild.class));
+                startActivity(new Intent(MainActivity.this, ChooseALevelWild.class));
             }
         });
+    }
 
+    private void setBossClickListener(Button btn_boss) {
         btn_boss.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
