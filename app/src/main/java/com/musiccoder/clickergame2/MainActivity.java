@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         btn_boss.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,Boss.class));
+                startActivity(new Intent(MainActivity.this,ChooseALevelBoss.class));
             }
         });
     }
