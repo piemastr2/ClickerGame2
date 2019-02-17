@@ -9,23 +9,23 @@ public class UnitTests {
     public void testPlayerAttacksEnemy() throws Exception {
         Sword sword = new Sword(5);
         Player player = new Player(10,100,sword);
-        Enemy enemy = new Enemy(10,5);
+        Enemy enemy = new Enemy(10,5,5);
 
         Encounter encounter = new Encounter();
         encounter.playerAttacksEnemy(player,enemy);
 
-        assertEquals(5, enemy.getHealth());
+        assertEquals(5, enemy.getCurrentHealth());
     }
 
     @Test
     public void testEnemyAttacksPlayer() throws Exception {
         Sword sword = new Sword(5);
         Player player = new Player(10,100,sword);
-        Enemy enemy = new Enemy(10,4);
+        Enemy enemy = new Enemy(10,4,5);
 
         Encounter encounter = new Encounter();
         encounter.enemyAttacksPlayer(enemy,player);
 
-        assertEquals(6, player.getHealth());
+        assertEquals(6, player.getCurrentHealth());
     }
 }

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,12 +23,16 @@ public class MainActivity extends AppCompatActivity {
         Sword sword = new Sword(5);
         Player player = Player.getInstance(50,10,sword);
 
-        //TextView healthTextView = (TextView)findViewById(R.id.)
-
         Button btn_shop = (Button)findViewById(R.id.Shop_main);
         Button btn_inn = (Button)findViewById(R.id.Inn_main);
         Button btn_wild = (Button)findViewById(R.id.Wild_main);
         Button btn_boss = (Button)findViewById(R.id.Boss_main);
+
+        TextView hpTextView = (TextView)findViewById(R.id.mainHpText);
+        TextView weaponDamageText = (TextView)findViewById(R.id.mainWeaponDmgText);
+
+        hpTextView.setText(Integer.toString(player.getCurrentHealth()) + "/" + Integer.toString(player.getMaxHealth()));
+        weaponDamageText.setText(Integer.toString(player.getSword().getAttackValue()));
 
         setShopClickListener(btn_shop);
 
