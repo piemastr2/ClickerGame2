@@ -17,6 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Shop"></activity>
+        <activity android:name=".Inn"></activity>
+        <activity android:name=".Wild"></activity>
     </application>
 
 </manifest>
