@@ -16,13 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Shop"></activity>
-        <activity android:name=".Inn"></activity>
-        <activity android:name=".Wild"></activity>
-        <activity android:name=".Boss"></activity>
-        <activity android:name=".BuyPlantPop"></activity>
-        <activity android:name=".ChooseALevelWild"></activity>
-        <activity android:name=".ChooseALevelBoss"></activity>
+        <activity android:name=".Shop" />
+        <activity android:name=".Inn" />
+        <activity android:name=".Wild" />
+        <activity android:name=".Boss" />
+        <activity android:name=".BuyPlantPop" />
+        <activity android:name=".ChooseALevelWild" />
+        <activity android:name=".ChooseALevelBoss" />
     </application>
 
 </manifest>

@@ -1,6 +1,6 @@
 package com.musiccoder.clickergame2;
 
-public class allWildInfo {
+public class AllWildInfo {
 
     public static Enemy wild1;
     public static Enemy wild2;
@@ -13,7 +13,7 @@ public class allWildInfo {
     public static Enemy wild9;
     public static Enemy wild10;
 
-    public allWildInfo() {
+    public AllWildInfo() {
         if (wild1 == null) {
             wild1 = new Enemy(60, 3, 1);
             wild2 = new Enemy(200, 30, 120);
@@ -25,6 +25,22 @@ public class allWildInfo {
             wild8 = new Enemy(60000, 5500,60000);
             wild9 = new Enemy(75000, 7000, 90000);
             wild10 = new Enemy(90000, 9000,150000);
+        }
+    }
+
+    public Enemy getWildInfo(int level) {
+        switch (level) {
+            case 1: return wild1;
+            case 2: return wild2;
+            case 3: return wild3;
+            case 4: return wild4;
+            case 5: return wild5;
+            case 6: return wild6;
+            case 7: return wild7;
+            case 8: return wild8;
+            case 9: return wild9;
+            case 10: return wild10;
+            default: return null;
         }
     }
 

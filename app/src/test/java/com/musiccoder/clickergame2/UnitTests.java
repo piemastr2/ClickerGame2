@@ -14,7 +14,7 @@ public class UnitTests {
         Encounter encounter = new Encounter();
         encounter.playerAttacksEnemy(player,enemy);
 
-        assertEquals(5, enemy.getHealth());
+        assertEquals(5, enemy.getCurrentHealth());
     }
 
     @Test
@@ -26,6 +26,6 @@ public class UnitTests {
         Encounter encounter = new Encounter();
         encounter.enemyAttacksPlayer(enemy,player);
 
-        assertEquals(6, player.getHealth());
+        assertEquals(6, player.getCurrentHealth());
     }
 }

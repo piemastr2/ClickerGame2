@@ -1,6 +1,6 @@
 package com.musiccoder.clickergame2;
 
-public class allBossInfo {
+public class AllBossInfo {
 
     public static Enemy boss1;
     public static Enemy boss2;
@@ -13,7 +13,7 @@ public class allBossInfo {
     public static Enemy boss9;
     public static Enemy boss10;
 
-    public allBossInfo() {
+    public AllBossInfo() {
         if (boss1 == null) {
             boss1 = new Enemy(100, 10, 100);
             boss2 = new Enemy(300, 40, 200);

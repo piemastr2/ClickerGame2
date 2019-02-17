@@ -22,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
         Sword sword = new Sword(5);
         Player player = Player.getInstance(50,10,sword);
 
-        //TextView healthTextView = (TextView)findViewById(R.id.)
-
         Button btn_shop = (Button)findViewById(R.id.Shop_main);
         Button btn_inn = (Button)findViewById(R.id.Inn_main);
         Button btn_wild = (Button)findViewById(R.id.Wild_main);
