@@ -26,6 +26,6 @@ public class Entity {
     }
 
     public boolean isAlive() {
-        return this.currentHealth >= 0;
+        return this.currentHealth > 0;
     }
 }

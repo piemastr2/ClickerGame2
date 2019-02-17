@@ -18,6 +18,10 @@ public class Player extends Entity{
         return playerInstance;
     }
 
+    static Player getInstance() {
+        return playerInstance;
+    }
+
     public int getCoins() {
         return coins;
     }

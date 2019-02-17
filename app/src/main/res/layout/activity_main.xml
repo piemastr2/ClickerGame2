@@ -78,7 +78,7 @@
                 tools:layout_editor_absoluteY="5dp" />
 
             <TextView
-                android:id="@+id/hptext"
+                android:id="@+id/mainHpText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="80dp"
@@ -90,7 +90,7 @@
         </android.support.constraint.ConstraintLayout>
 
         <TextView
-            android:id="@+id/weapondmgtext"
+            android:id="@+id/mainWeaponDmgText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="2dp"

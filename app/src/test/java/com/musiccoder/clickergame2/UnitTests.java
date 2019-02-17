@@ -9,7 +9,7 @@ public class UnitTests {
     public void testPlayerAttacksEnemy() throws Exception {
         Sword sword = new Sword(5);
         Player player = new Player(10,100,sword);
-        Enemy enemy = new Enemy(10,5);
+        Enemy enemy = new Enemy(10,5,5);
 
         Encounter encounter = new Encounter();
         encounter.playerAttacksEnemy(player,enemy);
@@ -21,7 +21,7 @@ public class UnitTests {
     public void testEnemyAttacksPlayer() throws Exception {
         Sword sword = new Sword(5);
         Player player = new Player(10,100,sword);
-        Enemy enemy = new Enemy(10,4);
+        Enemy enemy = new Enemy(10,4,5);
 
         Encounter encounter = new Encounter();
         encounter.enemyAttacksPlayer(enemy,player);
