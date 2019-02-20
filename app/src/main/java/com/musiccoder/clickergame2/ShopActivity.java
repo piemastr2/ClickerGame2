@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Shop extends AppCompatActivity {
+public class ShopActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class Shop extends AppCompatActivity {
         btn_buyPlants.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Shop.this, BuyPlantPop.class));
+                startActivity(new Intent(ShopActivity.this, BuyPlantPop.class));
             }
         });
     }

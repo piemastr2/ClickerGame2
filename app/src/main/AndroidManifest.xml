@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Shop" />
+        <activity android:name=".ShopActivity" />
         <activity android:name=".Inn" />
         <activity android:name=".Wild" />
         <activity android:name=".Boss" />

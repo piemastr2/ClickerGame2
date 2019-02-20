@@ -5,15 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="#466628"
     android:id="@+id/buyplantpop"
-    tools:context="com.musiccoder.clickergame2.Shop">
+    tools:context="com.musiccoder.clickergame2.ShopActivity">
+
+    <TextView
+        android:id="@+id/buyTreeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buyTreeProgressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="0"
+        android:textSize="30sp"
+        />
+    <ProgressBar
+        android:id="@+id/buyTreeProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_above="@id/buyTreeSeekBar"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="21dp"/>
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/buyTreeSeekBar"
         android:layout_width="388dp"
         android:layout_height="78dp"
-        android:background="@color/colorAccent"
         android:max="100"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
         android:scrollbars="horizontal"
@@ -52,6 +69,7 @@
         android:textSize="30dp" />
 
     <Button
+        android:id="@+id/buyTreeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="160dp"

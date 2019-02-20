@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    private int numOfTreesToBuy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,16 @@ public class MainActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.hide();
         }
+
+        Bundle extras = getIntent().getExtras();
+
+        if (extras != null) {
+            Intent intent = getIntent();
+            numOfTreesToBuy = Integer.valueOf(intent.getStringExtra("numOfTreesToBuy"));
+            Toast.makeText(MainActivity.this,Integer.toString(numOfTreesToBuy),Toast.LENGTH_LONG).show();
+        }
+
+
 
         Sword sword = new Sword(5);
         Player player = Player.getInstance(50,10,sword);
@@ -47,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         btn_shop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,Shop.class));
+                startActivity(new Intent(MainActivity.this,ShopActivity.class));
             }
         });
     }
@@ -79,5 +91,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,ChooseALevelBoss.class));
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onPause();
     }
 }

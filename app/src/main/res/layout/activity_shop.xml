@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.musiccoder.clickergame2.Shop">
+    tools:context="com.musiccoder.clickergame2.ShopActivity">
 
 
     <LinearLayout

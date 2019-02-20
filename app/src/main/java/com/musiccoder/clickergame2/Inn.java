@@ -53,6 +53,5 @@ public class Inn extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         startActivity(new Intent(Inn.this,MainActivity.class));
-        super.onBackPressed();
     }
 }
