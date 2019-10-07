@@ -49,21 +49,15 @@ public class BuyPlantPop extends Activity {
             @Override
             public void onClick(View view) {
                 deductPlayerCoinsByMoneyTreeCost();
-                increaseNumOfMoneyTreesOwned(numOfTreesToBuy);
+                MoneyTrees.getInstance().increaseNumOfMoneyTreesOwned(numOfTreesToBuy);
                 Intent intent = new Intent(BuyPlantPop.this,MainActivity.class);
                 intent.putExtra("numOfTreesToBuy",Integer.toString(numOfTreesToBuy));
                 startActivity(intent);
             }
         });
-
-
     }
 
     private void deductPlayerCoinsByMoneyTreeCost() {
         Player.getInstance().setCoins(Player.getInstance().getCoins()- MoneyTrees.moneyTreeCost);
-    }
-
-    private void increaseNumOfMoneyTreesOwned(int numOfTreesToBuy) {
-        MoneyTrees.getInstance().setMoneyTreesOwned(MoneyTrees.getInstance().getMoneyTreesOwned()+ numOfTreesToBuy);
     }
 }

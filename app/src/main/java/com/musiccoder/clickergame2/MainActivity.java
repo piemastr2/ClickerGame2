@@ -30,33 +30,30 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this,Integer.toString(numOfTreesToBuy),Toast.LENGTH_LONG).show();
         }
 
-
-
         Sword sword = new Sword(5);
         Player player = Player.getInstance(50,10,sword);
 
-        Button btn_shop = (Button)findViewById(R.id.Shop_main);
-        Button btn_inn = (Button)findViewById(R.id.Inn_main);
-        Button btn_wild = (Button)findViewById(R.id.Wild_main);
-        Button btn_boss = (Button)findViewById(R.id.Boss_main);
+        Button wildButton = (Button)findViewById(R.id.Wild_main);
+        Button bossButton = (Button)findViewById(R.id.Boss_main);
+        Button shopButton = (Button)findViewById(R.id.Shop_main);
+        Button plantButton = (Button)findViewById(R.id.Plant_main);
+        Button innButton = (Button)findViewById(R.id.Inn_main);
 
         TextView hpTextView = (TextView)findViewById(R.id.mainHpText);
         TextView weaponDamageText = (TextView)findViewById(R.id.mainWeaponDmgText);
 
         hpTextView.setText(Integer.toString(player.getCurrentHealth()) + "/" + Integer.toString(player.getMaxHealth()));
-        weaponDamageText.setText(Integer.toString(player.getSword().getAttackValue()));
+        weaponDamageText.setText("Weapon Damage: " + Integer.toString(player.getSword().getAttackValue()));
 
-        setShopClickListener(btn_shop);
-
-        setInnClickListener(btn_inn);
-
-        setWildClickListener(btn_wild);
-
-        setBossClickListener(btn_boss);
+        setWildClickListener(wildButton);
+        setBossClickListener(bossButton);
+        setShopClickListener(shopButton);
+        setPlantClickListener(plantButton);
+        setInnClickListener(innButton);
     }
 
-    private void setShopClickListener(Button btn_shop) {
-        btn_shop.setOnClickListener(new View.OnClickListener() {
+    private void setShopClickListener(Button shopButton) {
+        shopButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,ShopActivity.class));
@@ -64,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void setInnClickListener(Button btn_inn) {
-        btn_inn.setOnClickListener(new View.OnClickListener() {
+    private void setInnClickListener(Button innButton) {
+        innButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, Inn.class);
@@ -75,8 +72,17 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void setWildClickListener(Button btn_wild) {
-        btn_wild.setOnClickListener(new View.OnClickListener() {
+    private void setPlantClickListener(Button plantButton) {
+        plantButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,PlantTree.class));
+            }
+        });
+    }
+
+    private void setWildClickListener(Button wildButton) {
+        wildButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, ChooseALevelWild.class));
@@ -84,8 +90,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void setBossClickListener(Button btn_boss) {
-        btn_boss.setOnClickListener(new View.OnClickListener() {
+    private void setBossClickListener(Button bossButton) {
+        bossButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,ChooseALevelBoss.class));

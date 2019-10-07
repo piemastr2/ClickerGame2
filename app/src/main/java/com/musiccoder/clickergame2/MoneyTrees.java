@@ -31,4 +31,12 @@ public class MoneyTrees {
     public void setMoneyTreesOwned(int moneyTreesOwned) {
         this.moneyTreesOwned = moneyTreesOwned;
     }
+
+    public void increaseNumOfMoneyTreesOwned(int numOfTreesToBuy) {
+        this.moneyTreesOwned = this.moneyTreesOwned + numOfTreesToBuy;
+    }
+
+    public void collectMoney() {
+
+    }
 }

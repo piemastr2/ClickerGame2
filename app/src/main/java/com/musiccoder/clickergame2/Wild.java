@@ -28,17 +28,23 @@ public class Wild extends AppCompatActivity {
                 allWildInfo.getWildInfo(wildLevel).getLootAmount());
 
         final TextView healthTextView = (TextView) findViewById(R.id.hptext2);
+        final TextView playerHealthTextView = (TextView) findViewById(R.id.hptext1);
 
         healthTextView.setText(Integer.toString(allWildInfo.getWildInfo(wildLevel).getCurrentHealth()) + "/" +
                 Integer.toString(allWildInfo.getWildInfo(wildLevel).getMaxHealth()));
 
         Button attackButton = (Button) findViewById(R.id.attackbutton);
 
+        playerHealthTextView.setText(Integer.toString(Player.getInstance().getCurrentHealth()) + "/" +
+                Integer.toString(Player.getInstance().getMaxHealth()));
+
         attackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Encounter.exchangeBlows(Player.getInstance(), enemy);
                 healthTextView.setText(Integer.toString(enemy.getCurrentHealth()) + "/" + Integer.toString(enemy.getMaxHealth()));
+                playerHealthTextView.setText(Integer.toString(Player.getInstance().getCurrentHealth()) + "/" +
+                        Integer.toString(Player.getInstance().getMaxHealth()));
                 if (!Player.getInstance().isAlive() || !enemy.isAlive()) {
                     startActivity(new Intent(Wild.this, MainActivity.class));
                 }

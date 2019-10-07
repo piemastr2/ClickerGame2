@@ -21,8 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="WELCOME TO THE INN"
-            android:textSize="38sp"
-            android:paddingLeft="9dp" />
+            android:textSize="28sp"
+            android:paddingLeft="40dp" />
 
         <TextView
             android:id="@+id/emptystring"
