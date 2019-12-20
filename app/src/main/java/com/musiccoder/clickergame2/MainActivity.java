@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (extras != null) {
             Intent intent = getIntent();
-            numOfTreesToBuy = Integer.valueOf(intent.getStringExtra("numOfTreesToBuy"));
-            Toast.makeText(MainActivity.this,Integer.toString(numOfTreesToBuy),Toast.LENGTH_LONG).show();
+            //numOfTreesToBuy = Integer.valueOf(intent.getStringExtra("numOfTreesToBuy"));
+            //Toast.makeText(MainActivity.this,Integer.toString(numOfTreesToBuy),Toast.LENGTH_LONG).show();
         }
 
         Sword sword = new Sword(5);
@@ -36,18 +37,25 @@ public class MainActivity extends AppCompatActivity {
         Button wildButton = (Button)findViewById(R.id.Wild_main);
         Button bossButton = (Button)findViewById(R.id.Boss_main);
         Button shopButton = (Button)findViewById(R.id.Shop_main);
+        Button upgradeButton = (Button)findViewById(R.id.Upgrade_main);
         Button plantButton = (Button)findViewById(R.id.Plant_main);
         Button innButton = (Button)findViewById(R.id.Inn_main);
 
         TextView hpTextView = (TextView)findViewById(R.id.mainHpText);
         TextView weaponDamageText = (TextView)findViewById(R.id.mainWeaponDmgText);
+        TextView mainCoinsText = (TextView)findViewById(R.id.mainCoinsText);
 
         hpTextView.setText(Integer.toString(player.getCurrentHealth()) + "/" + Integer.toString(player.getMaxHealth()));
         weaponDamageText.setText("Weapon Damage: " + Integer.toString(player.getSword().getAttackValue()));
+        mainCoinsText.setText("Coins: " + Integer.toString(Player.getInstance().getCoins()));
+
+        ImageView playerHpBar = findViewById(R.id.player_hp_current);
+        playerHpBar.getDrawable().setLevel((int)(10000* player.getHpRatio()));
 
         setWildClickListener(wildButton);
         setBossClickListener(bossButton);
         setShopClickListener(shopButton);
+        setUpgradeClickListener(upgradeButton);
         setPlantClickListener(plantButton);
         setInnClickListener(innButton);
     }
@@ -57,6 +65,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,ShopActivity.class));
+            }
+        });
+    }
+
+    private void setUpgradeClickListener(Button upgradeButton) {
+        upgradeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,UpgradeActivity.class));
             }
         });
     }

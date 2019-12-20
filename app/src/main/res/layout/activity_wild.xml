@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#466628"
     tools:context="com.musiccoder.clickergame2.Wild">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -22,18 +22,30 @@
             android:layout_marginTop="40dp">
 
             <ImageView
-                android:id="@+id/hpbar2"
+                android:id="@+id/opponent_hp_bar"
+                android:padding="10dp"
                 android:layout_width="260dp"
                 android:layout_height="60dp"
                 android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
+
                 android:src="@drawable/temp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:layout_editor_absoluteX="0dp" />
 
+            <ImageView
+                android:id="@+id/opponent_hp_current"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:src="@drawable/clip_hp_bar"
+                />
+
             <TextView
-                android:id="@+id/hptext2"
+                android:id="@+id/opponent_hp_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="70dp"
@@ -86,7 +98,7 @@
             android:layout_marginTop="40dp">
 
             <ImageView
-                android:id="@+id/hpbar1"
+                android:id="@+id/player_hp_bar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
@@ -95,8 +107,21 @@
                 android:scaleType="fitCenter"
                 android:src="@drawable/temp" />
 
+            <ImageView
+                android:id="@+id/player_hp_current"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:paddingTop="7.5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:maxWidth="300dp"
+                android:maxHeight="66dp"
+                android:src="@drawable/clip_hp_bar"
+                />
+
             <TextView
-                android:id="@+id/hptext1"
+                android:id="@+id/player_hp_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="80dp"

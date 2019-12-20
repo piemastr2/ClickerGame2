@@ -37,4 +37,8 @@ public class Player extends Entity{
     public void setSword(Sword sword) {
         this.sword = sword;
     }
+
+    public void increaseHealth(int amountIncrease) {
+        this.maxHealth = this.maxHealth + amountIncrease;
+    }
 }

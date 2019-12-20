@@ -28,12 +28,24 @@ public class MoneyTrees {
         return this.moneyTreesOwned;
     }
 
+    public int getMoneyTreeProduction() {
+        return this.moneyTreeProduction;
+    }
+
+    public int getMoneyTreesPlanted() {
+        return this.moneyTreesPlanted;
+    }
+
     public void setMoneyTreesOwned(int moneyTreesOwned) {
         this.moneyTreesOwned = moneyTreesOwned;
     }
 
     public void increaseNumOfMoneyTreesOwned(int numOfTreesToBuy) {
         this.moneyTreesOwned = this.moneyTreesOwned + numOfTreesToBuy;
+    }
+
+    public void increaseNumOfMoneyTreesPlanted(int numOfTreesToPlant) {
+        this.moneyTreesPlanted = this.moneyTreesPlanted + numOfTreesToPlant;
     }
 
     public void collectMoney() {

@@ -6,31 +6,24 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:id="@+id/buyplantpop"
-    tools:context="com.musiccoder.clickergame2.ShopActivity">
+    tools:context="com.musiccoder.clickergame2.BuyPlantPop">
 
     <TextView
-        android:id="@+id/buyTreeTextView"
+        android:id="@+id/seekBarNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/buyTreeProgressBar"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="24dp"
         android:text="0"
         android:textSize="30sp"
         />
-    <ProgressBar
-        android:id="@+id/buyTreeProgressBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_above="@id/buyTreeSeekBar"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="21dp"/>
+
 
     <SeekBar
-        android:id="@+id/buyTreeSeekBar"
+        android:id="@+id/seekBar"
         android:layout_width="388dp"
         android:layout_height="78dp"
+        android:layout_marginTop="40dp"
         android:max="100"
         android:scrollbarAlwaysDrawHorizontalTrack="true"
         android:scrollbars="horizontal"
@@ -52,7 +45,7 @@
         android:textSize="25dp" />
 
     <TextView
-        android:id="@+id/coinstext"
+        android:id="@+id/currentCoinsText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="20dp"
@@ -61,18 +54,19 @@
         android:textSize="20dp" />
 
     <TextView
+        android:id="@+id/totalCost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="13dp"
         android:paddingTop="100dp"
-        android:text="The trees will cost 999 coins"
+        android:text="0 trees will cost 0 coins"
         android:textSize="20dp" />
 
     <Button
-        android:id="@+id/buyTreeButton"
+        android:id="@+id/buyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="160dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
         android:text="Confirm" />
 

@@ -1,8 +1,8 @@
 package com.musiccoder.clickergame2;
 
 public class Entity {
-    private int currentHealth;
-    private int maxHealth;
+    protected int currentHealth;
+    protected int maxHealth;
 
     public Entity(int maxHealth) {
         this.maxHealth = maxHealth;
@@ -27,5 +27,9 @@ public class Entity {
 
     public boolean isAlive() {
         return this.currentHealth > 0;
+    }
+
+    float getHpRatio() {
+        return getCurrentHealth() / (float) getMaxHealth();
     }
 }

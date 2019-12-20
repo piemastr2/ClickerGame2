@@ -5,8 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context="com.musiccoder.clickergame2.Wild">
+    android:background="#466628"
+    tools:context="com.musiccoder.clickergame2.Boss">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/top2"
@@ -22,7 +22,7 @@
             android:layout_marginTop="40dp">
 
             <ImageView
-                android:id="@+id/hpbar2"
+                android:id="@+id/opponent_hp_bar"
                 android:layout_width="260dp"
                 android:layout_height="60dp"
                 android:adjustViewBounds="true"
@@ -30,7 +30,7 @@
                 android:src="@drawable/temp" />
 
             <TextView
-                android:id="@+id/hptext2"
+                android:id="@+id/opponent_hp_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="70dp"
@@ -86,7 +86,7 @@
             android:layout_marginTop="40dp">
 
             <ImageView
-                android:id="@+id/hpbar1"
+                android:id="@+id/player_hp_bar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:adjustViewBounds="true"
@@ -96,7 +96,7 @@
                 android:src="@drawable/temp" />
 
             <TextView
-                android:id="@+id/hptext1"
+                android:id="@+id/player_hp_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="80dp"

@@ -28,4 +28,20 @@ public class AllBossInfo {
         }
     }
 
+    public Enemy getBossInfo(int level) {
+        switch (level) {
+            case 1: return boss1;
+            case 2: return boss2;
+            case 3: return boss3;
+            case 4: return boss4;
+            case 5: return boss5;
+            case 6: return boss6;
+            case 7: return boss7;
+            case 8: return boss8;
+            case 9: return boss9;
+            case 10: return boss10;
+            default: return null;
+        }
+    }
+
 }

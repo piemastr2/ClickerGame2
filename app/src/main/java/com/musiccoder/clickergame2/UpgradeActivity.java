@@ -7,32 +7,32 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ShopActivity extends AppCompatActivity {
+public class UpgradeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shop);
+        setContentView(R.layout.activity_upgrade);
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.hide();
         }
 
-        Button buyTreesButton = (Button)findViewById(R.id.shop_tree);
-        Button buySwordsButton = (Button)findViewById(R.id.shop_weapon);
+        Button damageButton = findViewById(R.id.damage_button);
+        Button healthButton = findViewById(R.id.health_button);
 
-        buyTreesButton.setOnClickListener(new View.OnClickListener() {
+        damageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ShopActivity.this, BuyPlantPop.class));
+                //startActivity(new Intent(UpgradeActivity.this, BuyPlantPop.class));
             }
         });
 
-        buySwordsButton.setOnClickListener(new View.OnClickListener() {
+        healthButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ShopActivity.this, BuySword.class));
+                startActivity(new Intent(UpgradeActivity.this, UpgradeHealth.class));
             }
         });
     }
